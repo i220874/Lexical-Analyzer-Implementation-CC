@@ -194,7 +194,9 @@ public class ManualScanner {
     private void scanString() {
         int startCol = col;
         StringBuilder sb = new StringBuilder();
-        advance(); 
+        
+        // Fix: Append the opening quote
+        sb.append(advance()); 
         
         while (pos < input.length() && peek() != '"') {
             if (peek() == '\\') { 
@@ -206,11 +208,12 @@ public class ManualScanner {
         }
         
         if (pos >= input.length()) {
-            // REPORT ERROR: Unclosed String [cite: 137]
             errorHandler.reportError("Literal Error", line, startCol, sb.toString(), "Unclosed string literal");
             return;
         }
-        advance(); 
+        
+        // Fix: Append the closing quote
+        sb.append(advance()); 
         tokens.add(new Token(TokenType.STRING_LITERAL, sb.toString(), line, startCol));
     }
 
@@ -269,8 +272,8 @@ public class ManualScanner {
     private TokenType determineSingleCharType(char c) {
         if ("(){}[],;:".indexOf(c) != -1) return TokenType.PUNCTUATOR;
         if ("+-*/%".indexOf(c) != -1) return TokenType.OPERATOR_ARITHMETIC;
-        if ("<>=!".indexOf(c) != -1) return TokenType.OPERATOR_RELATIONAL;
-        if (c == '=') return TokenType.OPERATOR_ASSIGNMENT;
+        if ("<>!".indexOf(c) != -1) return TokenType.OPERATOR_RELATIONAL; // Removed '=' from here
+        if (c == '=') return TokenType.OPERATOR_ASSIGNMENT; // Correct placement
         return null;
     }
     
