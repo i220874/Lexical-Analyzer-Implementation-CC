@@ -1,0 +1,7 @@
+start
+  ## This is a valid comment
+  declare Count = 10;
+  condition (Count >= 10) {
+      output "Hello";
+  }
+finish
