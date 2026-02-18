@@ -2,14 +2,14 @@
 **Lexical Analyzer Implementation for Custom Language (.lang)**
 
 ## 👥 Team Members
-* **Member 1:** [Name] - [Roll Number]
-* **Member 2:** [Name] - [Roll Number]
-* **Section:** [Section A/B/C]
+**Member 1:** Haseeb Sultan 22i-0874 CS-E
+**Member 2:** Bilal Naveed  22i-0811 CS-B
+
 
 ---
 
 ## 📂 Project Structure
-[cite_start]The project follows the strict directory structure required by the assignment guidelines [cite: 147-151].
+The project follows the strict directory structure required by the assignment guidelines [cite: 147-151].
 
 ```text
 RollNumber1-RollNumber2-Section/
