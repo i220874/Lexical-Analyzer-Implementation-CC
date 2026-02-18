@@ -1,0 +1,14 @@
+start
+  ## Error 1: Identifier starting with lowercase
+  declare invalidVar = 10;
+  
+  ## Error 2: Identifier starting with digit
+  declare 2Count = 5;
+  
+  ## Error 3: Unknown character ($ is not in alphabet)
+  declare Price = 100$;
+  
+  ## Error 4: Unclosed string literal
+  output "This string never ends... ;
+  
+finish

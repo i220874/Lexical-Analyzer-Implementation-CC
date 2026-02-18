@@ -1,7 +1,13 @@
 start
-  ## This is a valid comment
+  ## Basic Declaration
   declare Count = 10;
-  condition (Count >= 10) {
-      output "Hello";
+  declare MAX_VAL = 100;
+  
+  ## Conditional Logic
+  condition (Count < MAX_VAL) {
+      output "Count is within range";
+  } else {
+      output "Count overflow";
   }
-finish
+  
+  finish

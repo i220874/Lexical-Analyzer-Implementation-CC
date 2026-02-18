@@ -1,0 +1,11 @@
+start
+  ## String with escapes (New line, Tab, Quote, Backslash)
+  declare Message = "Line 1\nLine 2\tTabbed\n\"Quoted\"";
+  
+  ## Character literals
+  declare Char1 = 'A';
+  declare Char2 = '\n';
+  declare Char3 = '\'';
+  
+  output Message;
+finish

@@ -1,0 +1,12 @@
+start
+  ## This is a valid single line comment
+  
+  #* This is a valid
+     Multi-line comment
+     spanning 3 lines
+  *#
+  
+  declare X = 10; ## Comment at end of line
+  
+  #* This is an unclosed comment that should trigger an error...
+finish

@@ -1,0 +1,18 @@
+start
+  declare Result = 0;
+  declare X = 5;
+  declare Y = 2;
+  
+  #* Complex Expression Test:
+     Precedence: () -> ** -> * / % -> + - 
+  *#
+  
+  Result = (X + Y) * 10 / 2 - 3 ** 2;
+  
+  loop (Result >= 0) {
+      Result -= 1;
+      if (Result == 5) {
+          continue;
+      }
+  }
+finish
