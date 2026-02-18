@@ -1,0 +1,34 @@
+Language Grammar & Regular Expressions
+CS4031 Assignment 01 - Lexical Analyzer
+
+1. KEYWORDS (Case-Sensitive)
+   Regex: (start|finish|loop|condition|declare|output|input|function|return|break|continue|else)
+
+2. IDENTIFIERS
+   Regex: [A-Z][a-z0-9]{0,30}
+   Rule: Must start with an uppercase letter. Can contain lowercase letters and digits.
+   Max Length: 31 characters.
+
+3. LITERALS
+   Integer: [+-]?[0-9]+
+   Float:   [+-]?[0-9]+\.[0-9]{1,6}([eE][+-]?[0-9]+)?
+   Boolean: (true|false)
+   String:  "([^"\\\n]|\\.|\\n|\\t|\\r)*"
+   Char:    '([^'\\\n]|\\.)'
+
+4. OPERATORS
+   Arithmetic: +, -, *, /, %, **
+   Relational: ==, !=, <=, >=, <, >
+   Logical:    &&, ||, !
+   Assignment: =, +=, -=, *=, /=
+   Inc/Dec:    ++, --
+
+5. PUNCTUATORS
+   Symbols: ( ) { } [ ] , ; :
+
+6. COMMENTS
+   Single-line: ##[^\n]*
+   Multi-line:  #\*([^*]|(\*+[^#]))*\*+#
+
+7. WHITESPACE
+   Regex: [ \t\r\n]+ (Skipped, but used to track line numbers)
